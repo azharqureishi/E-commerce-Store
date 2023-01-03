@@ -1,0 +1,125 @@
+// ----> Announcement style code
+// ***********************
+.announcement{
+    height: 30px;
+    background-color: teal;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    @include device(tablet){
+        font-size: 12px;
+    }
+}
+.randomDev{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   & li{
+     font-size: 12px;
+     font-style: italic;
+     color: teal;
+     font-weight: 700;
+     margin-right: 10px;
+    } 
+    & button{
+        padding: 4px 8px;
+        border-radius: 15px 10px 15px 10px;
+        font-style: italic;
+        background-color: transparent;
+        border: 2px solid teal;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            scale: 1.1;
+        }
+   }
+}
+
+// ----> navigation style code
+// ***********************
+.header{
+    display: flex;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 15px 15px -20px;
+    &__wrapper{
+        padding: 10px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include device(tablet){
+            padding: 10px 0px;
+        }
+        &__left{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            .language{
+                font-size: 14px;
+                cursor: pointer;  
+                @include device(tablet){
+                    display: none;
+                } 
+            }
+            .searchContainer{
+                border: 0.5px solid lightgray;
+                display: flex;
+                align-items: center;
+                margin-left: 25px;
+                padding: 5px;
+                @include device(tablet){
+                    margin-left: 0px;
+                    
+                }
+                input{
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+        &__center{
+            flex: 1;
+            text-align: start;
+            .logo{
+                font-weight: bold;
+                font-size: 26px;
+                text-decoration: line-through;
+                margin-left: 20px;
+                color: teal;
+                cursor: pointer;
+                @include device(tablet){
+                    font-size: 18px;
+                    text-align: center;
+                }
+            }
+        }
+        &{
+            flex: 1;
+            .menu-list{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            
+                .menuItem{
+                    font-size: 14px;
+                    cursor: pointer;
+                    margin-left: 25px;
+                    transition: all 0.5s ease-in-out;
+                    &:hover{
+                      scale: 1.1;
+                    }
+                    @include device(tablet){
+                        font-size: 12px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

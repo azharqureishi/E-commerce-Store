@@ -1,0 +1,38 @@
+// add mixins styles
+// *****************************
+@import "./abstracts/mixins";
+
+
+// reset all default styles
+// *****************************
+@import "./abstracts/reset";
+
+// //  ---->Typography
+// // *****************************
+
+// @import "./core/typography";
+
+// ----> Header
+// *****************************
+@import "./components/header";
+
+// ----> Slider
+// *****************************
+@import "./components/carousel";
+
+// ----> import all pages stlye
+// *****************************
+@import "./pages/home";
+@import "./pages/productList";
+@import "./pages/product";
+@import "./pages/login";
+@import "./pages/register";
+@import "./pages/cart";
+
+
+// ----> FOOTER
+// *****************************
+@import "./components/footer"
+
+
+

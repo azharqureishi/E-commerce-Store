@@ -1,0 +1,153 @@
+// -----> style categories component
+// **************************
+.categories{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        @include device(tablet){
+            flex-direction: column;
+        }
+    }
+
+    // -----> style categoryitem component
+    // **************************
+    
+    .categoryItems{
+   flex: 1;
+   margin: 3px;
+   height: 70vh;
+   position: relative;
+   &__image{
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+    }
+   &__info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__title{
+        color: white;
+        margin-bottom: 20px;
+    }
+    &__button{
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        background-color: white;
+        color: gray;
+        font-weight: 600;
+    }
+}
+}
+
+// -----> style product component
+// **************************
+.home__products{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-between;
+}
+.home__product__details{
+    flex: 1;
+    margin: 5px;
+    min-width: 280px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #f5fbfd;
+    &__image{
+        height: 75%;
+    }
+    &__info{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    &:hover{
+        opacity: 1;
+    }
+    &__icon{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        transition: all 0.5s ease;
+        &:hover{
+            background-color: #e9f5f5;
+            transform: scale(1.1);
+        }
+    }
+    & .redHeart{
+        color: red !important;
+        scale: 1.2;
+    }
+    }
+}
+
+// -----> style newsletter component
+// **************************
+.home__newsletter{
+    background-color: #fcf5f5;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__title{
+        font-size: 70px;
+        margin-bottom: 20px;
+        @include device(tablet){
+            font-size: 40px;
+        }
+    }
+    &__desc{
+        font-size: 24px;
+        font-weight: 300;
+        margin-bottom: 20px;
+        @include device(tablet){
+            font-size: 16px;
+        }
+    }
+    &__inputContainer{
+        background-color: white;
+        width: 50%;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid lightgray;
+        &__input{
+            padding-left: 20px;
+            flex: 8;
+            border: none;
+        }
+        &__button{
+            flex: 2;
+            background: teal;
+            color: white;
+            border: none;
+        }
+    }
+}

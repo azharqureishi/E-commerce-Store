@@ -1,0 +1,42 @@
+.productList{
+    &__title{
+        margin: 20px;
+    }
+    &__filterContainer{
+        display: flex;
+        justify-content: space-between;
+        &__filter{
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            @include device(tablet){
+                margin: 0px 20px;
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+            
+
+         &__title{
+            font-size: 20px;
+            font-weight: 600;
+            margin-right: 10px;
+            @include device (tablet){
+                font-size: 14px;
+            }
+         }
+         &__select{
+            padding: 10px;
+            margin-right: 10px;
+            @include device (tablet){
+                padding: 5px;
+                margin-top: 2px;
+            
+            }
+            
+         }
+        }
+
+        
+    }
+}

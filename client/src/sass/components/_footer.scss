@@ -1,0 +1,93 @@
+.footer{
+    display: flex;
+    @include device(tablet){
+        flex-direction: column;
+        padding: 0px 1px;
+    }
+    &__left{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        &__logo{
+            color: teal;
+            font-size: 24px;
+        }
+        &__desc{
+            padding: 10px 0px;
+        }
+        &__socialContainer{
+            display: flex;
+            &__socialIcon{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 20px;
+                color: white;
+                cursor: pointer;
+                &:hover{
+                    scale: 1.1;
+                }
+            }
+        }
+    }
+    &__center{
+        flex: 1;
+        padding: 20px;
+        @include device(tablet){
+            display: none;
+        }
+        &__title{
+            margin-bottom: 10px;
+            font-weight: 300;
+            font-size: 24px;
+        }
+        &__listContainer{
+            display: flex;
+            flex-wrap: wrap;
+            &__listItem{
+              width: 50%;
+              margin-bottom: 10px;
+              cursor: pointer;
+              &:hover{
+                scale: 1.1;
+                text-decoration: underline;
+              }
+            }
+        }
+    } 
+    &__right{
+        flex: 1;
+        padding: 20px;
+        @include device(tablet){
+            background-color: #fff8f8;
+        }
+        
+        &__title{
+            font-size: 24px;
+            text-align: start;
+        }
+        &__contactContainer{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+            &__contactItem{
+             margin: 10px 0px;
+             display: flex; 
+             align-items: center;
+             cursor: all-scroll;
+             & span{
+                font-size: 12px;
+                font-weight: 300; 
+                padding-left: 5px;               
+             }   
+            }
+        }
+        &__payment{
+            width: 50%;
+        }
+    }
+}

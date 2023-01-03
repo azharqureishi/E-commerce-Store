@@ -1,0 +1,112 @@
+.productPage{
+    &__wrapper{
+        padding: 50px;
+        display: flex;
+        @include device(tablet){
+            flex-direction: column;
+        }
+        &__imgContainer{
+            flex: 1;
+            
+            &__img{
+                height: 90vh;
+                width: 100%;
+                object-fit: cover;
+                @include device(tablet){
+                    height: 40vh;
+                }
+                
+            }
+        }
+        &__infoContainer{
+            flex: 1;
+            padding: 0 50px;
+            @include device(tablet){
+                padding: 10px 0;
+            }
+            &__title{
+                font-weight: 200;
+                font-size: 24px;
+            }
+            &__desc{
+                margin: 20px 0px;
+                @include device(tablet){
+                    margin-top: 10px;
+                }
+            }
+            &__price{
+                font-size: 40px;
+                font-weight: 100;
+            }
+            &__filterContainer{
+                width: 50%;
+                display: flex;
+                margin: 30px 0px;
+                justify-content: space-between;
+                @include device(tablet){
+                    width: 100%;
+                }
+                &__filter{
+                    display: flex;
+                    align-items: center;
+                    
+                    &__filterTitle{
+                        font-size: 20px;
+                        font-weight: 200;
+                    }
+                    &__filterColor{
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        border: 1px solid lightgray;
+                        margin: 0px 5px;
+                        cursor: pointer;
+                    }
+                    &__filterSize{
+                        margin-left: 10px;
+                        padding: 5px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            &__addContainer{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 50%;
+                @include device(tablet){
+                    width: 100%;
+                }
+                &__amountContainer{
+                    display: flex;
+                    align-items: center;
+                    font-weight: 700;
+                    cursor: pointer;
+                    &__amount{
+                       display: flex;
+                       align-items: center;
+                       justify-content: center;
+                       width: 30px;
+                       height: 30px;
+                       border-radius: 10px; 
+                       border: 1px solid teal;
+                       margin: 0px 10px;
+                    }
+                }
+                &__button{
+                    padding: 15px;
+                    border: 2px solid teal;
+                    background: none;
+                    cursor: pointer;
+                    font-weight: 500;
+                    transition: all .5s ease;
+                    &:hover{
+                        color: #FFFFFF;
+                        background-color: teal;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
